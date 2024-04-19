@@ -1,0 +1,134 @@
+package stub;
+
+/**
+ * クラス PotentionMater の注釈をここに書きます.
+ * 
+ * @author (あなたの名前)
+ * @version (バージョン番号もしくは日付)
+ */
+import java.io.*;
+import javax.swing.*;
+import javax.swing.event.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.geom.*;
+
+public class PotentionMeter extends JSlider implements Resettable
+{
+    // private static I2CBus i2cBus = null;
+    // private static I2CDevice device= null;
+    protected static final int OFFSET_X = 70;
+    protected static final int OFFSET_Y = 200;
+    protected static final int SIZE = 60;
+    protected static final int PITCH = 120;
+    protected static final int SLIDER_OFFSET = 30;
+    protected static final int SLIDER_WIDTH = 100;
+    protected static final int SLIDER_HEIGHT = 20;
+    protected static final int TEXT_OFFSET = 80;
+    protected static final int TEXT_WIDTH = 20;
+    protected int locateX;
+    protected int locateY;
+    protected String caption;
+    protected Knob knob; 
+
+    private int ch;
+
+    public PotentionMeter( int ch ) {
+        super( 0 , 255 );
+        this.ch = ch;
+        locateX = OFFSET_X + (ch * PITCH);
+        locateY = OFFSET_Y;
+        if ( ch == 0 ) {
+            caption = "X";
+            setOrientation( JSlider.HORIZONTAL );
+            setInverted( false );
+            setBounds( locateX - SLIDER_WIDTH/2, locateY + SLIDER_OFFSET, SLIDER_WIDTH, SLIDER_HEIGHT);
+        } else {
+            caption = "Y";
+            setOrientation( JSlider.VERTICAL );
+            setInverted( true );
+            setBounds( locateX + SLIDER_OFFSET, locateY - SLIDER_WIDTH/2, SLIDER_HEIGHT, SLIDER_WIDTH);
+        }
+        setBackground( Color.WHITE );
+        knob = new Knob();
+        reset();
+    }
+
+    @Override
+    public void reset() {
+    }
+
+    public void addListener( PotentionMeterListener pmtrListener ) {
+        if ( pmtrListener != null ) {
+            addChangeListener( new ChangeListener() {
+                    @Override
+                    public void stateChanged( ChangeEvent e ) {
+                        pmtrListener.potentionMeterPerformed();
+                    }
+                }
+            );
+        }
+    }
+
+    @Override
+    public int getValue() {
+        return ( super.getValue() );
+    }
+
+    // public int getValue() {
+
+    // try {
+    // return ( device.read( ch ) );
+    // } catch ( Exception e ) {
+    // return ( -1 );
+    // }
+    // }
+
+    public void paintPicture( Graphics g ) {
+        g.setColor( Color.BLACK );
+        g.drawString( caption , locateX - TEXT_WIDTH/2, locateY + TEXT_OFFSET );
+        // g.fillOval( locateX - SIZE/2, locateY - SIZE/2, SIZE, SIZE );
+        knob.repaint();
+
+    }
+
+    public void addGui( JPanel p ) {
+        p.add( this );
+        p.add( knob );
+        addChangeListener( new ChangeListener() {
+                @Override
+                public void stateChanged( ChangeEvent e ) {
+                    p.repaint();
+                }
+            }
+        );
+
+    }
+
+    private class Knob extends JPanel {
+        public Knob() {
+            setLayout( null );
+            setBounds( locateX - SIZE/2, locateY - SIZE/2, SIZE, SIZE );
+            // setOpaque( false );
+            setOpaque( true );
+            setBackground( Color.WHITE );
+        }
+
+        @Override
+        public void paintComponent( Graphics g ) {
+            // super.paint( g );
+            Graphics2D g2 = (Graphics2D)g;
+            g2.setColor( Color.BLACK );
+            g2.fillOval( 0, 0, SIZE, SIZE );
+            AffineTransform af = new AffineTransform();
+            af.setToRotation((double)(getValue()-128)*Math.PI/180,SIZE/2,SIZE/2);
+            g2.setTransform(af);
+            g2.setColor( Color.LIGHT_GRAY );
+            // g2.fillRect( SIZE/2-3,5,8,15 );
+            g2.fill(new Rectangle2D.Double( SIZE/2-3,5,8,15 ) );
+        }
+
+    }
+}
+
+

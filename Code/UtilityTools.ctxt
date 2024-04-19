@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=waitTime_ms
+comment0.target=void\ wait_ms(int)
+comment0.text=\n\ UtilityTools\ \u30AF\u30E9\u30B9\u306E\u30A4\u30F3\u30B9\u30BF\u30F3\u30B9\u306E\u305F\u3081\u306E\u30B3\u30F3\u30B9\u30C8\u30E9\u30AF\u30BF\n
+numComments=1

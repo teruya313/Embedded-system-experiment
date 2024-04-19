@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=PreKadai3_DrawManual
+comment1.params=
+comment1.target=void\ drawManual()
+comment2.params=waitTime_ms
+comment2.target=void\ wait_ms(int)
+numComments=3

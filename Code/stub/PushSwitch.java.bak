@@ -1,0 +1,63 @@
+package stub;
+
+/**
+ * クラス PuchSwitch の注釈をここに書きます.
+ * 
+ * @author (あなたの名前)
+ * @version (バージョン番号もしくは日付)
+ */
+import java.io.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class PushSwitch extends JToggleButton implements Resettable
+{
+    // private static final GpioController gpio = GpioFactory.getInstance();
+    // private GpioPinDigitalInput pin;
+    protected static final int OFFSET_X = 270;
+    protected static final int OFFSET_Y = 120;
+    protected int assign;
+
+    public PushSwitch( int assign ) {
+        this.assign = assign;
+        setBounds( OFFSET_X , assign , 50 , 35 );
+        setIcon( new ImageIcon( "./stub/PushSWT_H.png" ) );
+        setSelectedIcon( new ImageIcon( "./stub/PushSWT_L.png" ) );
+        reset();
+    }
+
+    @Override
+    public void reset() {
+        setSelected( false );
+    }
+
+    public void addListener( PushSwitchListener pswListener ) { 
+        if ( pswListener != null ) {
+            addActionListener( new ActionListener(){
+                    @Override
+                    public void actionPerformed( ActionEvent e ) {
+                        pswListener.pushSwitchPerformed();
+                    }
+                }
+            );
+        }
+    }
+
+    public boolean isHigh() {
+        return ( !isSelected() );
+    }
+
+    public boolean isLow() {
+        return ( isSelected() );
+    }
+
+    public boolean isPush() {
+        return ( isSelected() );
+    }
+
+    // public PinState getState() {
+        // return ( pin.getState() );
+    // }
+}
+

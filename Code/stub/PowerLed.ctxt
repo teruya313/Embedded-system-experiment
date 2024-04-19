@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=PowerLed
+comment1.params=assign
+comment1.target=PowerLed(int)
+comment2.params=
+comment2.target=void\ reset()
+comment3.params=
+comment3.target=void\ low()
+comment4.params=g
+comment4.target=void\ setLedColor(java.awt.Graphics)
+numComments=5

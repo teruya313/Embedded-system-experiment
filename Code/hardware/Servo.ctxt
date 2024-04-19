@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Servo
+comment1.params=raspiPin
+comment1.target=Servo(com.pi4j.io.gpio.Pin)
+comment10.params=
+comment10.target=int\ getMax()
+comment2.params=
+comment2.target=void\ reset()
+comment3.params=value
+comment3.target=void\ setValueUnlimited(int)
+comment4.params=value
+comment4.target=void\ setMin(int)
+comment5.params=value
+comment5.target=void\ setMax(int)
+comment6.params=min\ max
+comment6.target=void\ setMinMax(int,\ int)
+comment7.params=value
+comment7.target=void\ setValue(int)
+comment8.params=
+comment8.target=int\ getValue()
+comment9.params=
+comment9.target=int\ getMin()
+numComments=11

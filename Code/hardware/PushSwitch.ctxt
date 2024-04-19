@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=PushSwitch
+comment1.params=raspiPin
+comment1.target=PushSwitch(com.pi4j.io.gpio.Pin)
+comment2.params=
+comment2.target=void\ reset()
+comment3.params=pswListener
+comment3.target=boolean\ addListener(PushSwitchListener)
+comment4.params=event
+comment4.target=void\ handleGpioPinDigitalStateChangeEvent(com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent)
+comment5.params=
+comment5.target=boolean\ isHigh()
+comment6.params=
+comment6.target=boolean\ isLow()
+comment7.params=
+comment7.target=boolean\ isPush()
+comment8.params=
+comment8.target=com.pi4j.io.gpio.PinState\ getState()
+numComments=9

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Hardware
+comment1.params=
+comment1.target=Hardware()
+comment2.params=e
+comment2.target=void\ focusGained(java.awt.event.FocusEvent)
+comment3.params=e
+comment3.target=void\ focusLost(java.awt.event.FocusEvent)
+comment4.params=
+comment4.target=Hardware\ getInstance()
+comment5.params=
+comment5.target=void\ reset()
+comment6.params=
+comment6.target=void\ frameSetting()
+comment7.params=g
+comment7.target=void\ paint(java.awt.Graphics)
+comment8.params=e
+comment8.target=void\ keyPressedPerformed(java.awt.event.KeyEvent)
+numComments=9

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=DrawUnit
+comment1.params=
+comment1.target=DrawUnit()
+comment2.params=
+comment2.target=DrawUnit\ getInstance()
+comment3.params=
+comment3.target=void\ reset()
+comment4.params=g
+comment4.target=void\ paint(java.awt.Graphics)
+numComments=5

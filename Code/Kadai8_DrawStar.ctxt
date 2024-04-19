@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Kadai8_DrawStar
+comment1.params=
+comment1.target=void\ drawFigure()
+comment2.params=x
+comment2.target=int\ convertX(int)
+comment3.params=y
+comment3.target=int\ convertY(int)
+comment4.params=
+comment4.target=void\ systemExit()
+numComments=5

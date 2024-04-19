@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Kadai2_SetDrawArea
+comment1.params=
+comment1.target=void\ setValueUnlimited()
+comment2.params=
+comment2.target=void\ potXchanged()
+comment3.params=
+comment3.target=void\ potYchanged()
+comment4.params=
+comment4.target=void\ sw1changed()
+comment5.params=
+comment5.target=void\ sw2changed()
+numComments=6

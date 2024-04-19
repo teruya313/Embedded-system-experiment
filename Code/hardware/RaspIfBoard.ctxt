@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=RaspIfBoard
+comment1.params=
+comment1.target=RaspIfBoard()
+comment10.params=digit
+comment10.target=int\ getLed(int)
+comment2.params=
+comment2.target=RaspIfBoard\ getInstance()
+comment3.params=
+comment3.target=void\ reset()
+comment4.params=ch\ value
+comment4.target=void\ setLedBit(int,\ boolean)
+comment5.params=ch\ value
+comment5.target=void\ setLedBit(int,\ int)
+comment6.params=ch
+comment6.target=int\ getLedBit(int)
+comment7.params=value
+comment7.target=void\ setLed(int)
+comment8.params=value\ digit
+comment8.target=void\ setLed(int,\ int)
+comment9.params=
+comment9.target=int\ getLed()
+numComments=11

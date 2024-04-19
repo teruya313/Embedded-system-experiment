@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Laser
+comment1.params=raspiPin
+comment1.target=Laser(com.pi4j.io.gpio.Pin)
+comment2.params=
+comment2.target=void\ reset()
+comment3.params=
+comment3.target=void\ on()
+comment4.params=
+comment4.target=void\ off()
+comment5.params=
+comment5.target=boolean\ isOn()
+comment6.params=
+comment6.target=boolean\ isOff()
+numComments=7

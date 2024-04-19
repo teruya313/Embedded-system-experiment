@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=PreKadai2_ServoXandLaser
+comment1.params=
+comment1.target=void\ moveServoXandLaser()
+comment2.params=waitTime_ms
+comment2.target=void\ wait_ms(int)
+numComments=3

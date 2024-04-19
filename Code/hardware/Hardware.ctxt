@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Hardware
+comment1.params=
+comment1.target=Hardware()
+comment2.params=g
+comment2.target=void\ paint(java.awt.Graphics)
+comment3.params=
+comment3.target=Hardware\ getInstance()
+comment4.params=
+comment4.target=void\ reset()
+comment5.params=
+comment5.target=void\ frameSetting()
+numComments=6
